@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MonkeyApp"
+    x:Class="MonkeyApp.MainPage"
+    Title="XmarinApp">
+
+    <StackLayout 
+        Spacing="10" Padding="10" 
+        x:Name="layout" 
+        Orientation="Vertical" 
+        VerticalOptions="Center">
+        
+        <!-- Mode de binding -->
+        <!-- Mode = OneWay: Da minha ViewModel para minha View -->
+        <!-- Mode = OneWayToSource: Da minha View para minha ViewModel (Não vai funcionar, apenas se eu mudar para Entry e alterar o texto) -->
+        <Label 
+            Text="{Binding Mode = Default, Path = Descricao}" 
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+
+        <Entry 
+            Placeholder="Email"/>
+
+        <Entry
+            Placeholder="Password"
+            IsPassword="True"/>
+
+        <Button
+            BackgroundColor="Aqua"
+            TextColor="White"
+            Text="ENTRAR"/>
+        
+    </StackLayout>
+
+</ContentPage>
