@@ -20,17 +20,18 @@
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
 
+        <!-- Mode padrão é ToWay -->
         <Entry 
-            Placeholder="Email"/>
+            Text="{Binding SearchTerm}"
+            Placeholder="Pesquisar"/>
 
-        <Entry
-            Placeholder="Password"
-            IsPassword="True"/>
-
+        <!-- O event Click não recoendado, foge do MVVN por ter um acoplamento muito forte da lógica com a tela -->
+        <!-- O Command vai disparar alguma coisa que está definida na minha ViewModel quando eu clicar no botão  -->
         <Button
+            Command="{Binding SearchCommand}"
             BackgroundColor="Aqua"
             TextColor="White"
-            Text="ENTRAR"/>
+            Text="Pesquisar"/>
         
     </StackLayout>
 
